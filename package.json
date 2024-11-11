@@ -1,0 +1,10 @@
+{
+  "name": "understanding-react",
+  "version": "1.0.0",
+  "description": "Tony Alicea's course",
+  "main": "index.js",
+  "repository": "https://github.com/okslutsiv/understanding-react",
+  "author": "okslutsiv",
+  "license": "MIT",
+  "private": false
+}

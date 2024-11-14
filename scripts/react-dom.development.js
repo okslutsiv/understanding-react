@@ -13148,28 +13148,18 @@
     setTextContent(domElement, "");
   }
   function commitTextUpdate(textInstance, oldText, newText) {
-    console.log(`Updating text from ${oldText} to ${newText}`);
     textInstance.nodeValue = newText;
   }
   function appendChild(parentInstance, child) {
-    console.log(`Appending child...`);
-    console.log(child);
-
     parentInstance.appendChild(child);
   }
   function appendChildToContainer(container, child) {
     var parentNode;
 
     if (container.nodeType === COMMENT_NODE) {
-      console.log("Inserting child ...");
       parentNode = container.parentNode;
       parentNode.insertBefore(child, container);
     } else {
-      console.log("Appending child to container ...");
-      console.log(child);
-      console.log("Container is ...");
-      console.log(container);
-
       parentNode = container;
       parentNode.appendChild(child);
     } // This container might be used for a portal.
@@ -13203,19 +13193,9 @@
   }
 
   function removeChild(parentInstance, child) {
-    console.log("Removing child from parentInstance");
-    console.log(child);
-    console.log("parentInstance is:");
-    console.log(parentInstance);
-
     parentInstance.removeChild(child);
   }
   function removeChildFromContainer(container, child) {
-    console.log("Removing child from container");
-    console.log(child);
-    console.log("container is:");
-    console.log(parentInstance);
-
     if (container.nodeType === COMMENT_NODE) {
       container.parentNode.removeChild(child);
     } else {
